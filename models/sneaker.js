@@ -16,7 +16,14 @@ var sneakerSchema = new Schema({
     price: { 
         type: String,
         required: true
+    },
+    img: { 
+        type: String
+    },
+    img2: { 
+        type: String
     }
+    
 }); 
 
 module.exports = mongoose.model('Sneaker', sneakerSchema); 

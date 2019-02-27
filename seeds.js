@@ -13,13 +13,3 @@ Promise.all([p1])
     console.log(sneaker)
   process.exit();
 });
-
-
-
-// .then(function() {
-//   return Performer.deleteMany({});
-// })
-// .then(function() {
-
-// });
-

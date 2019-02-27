@@ -1,12 +1,11 @@
 <%- include('../partials/header') %>
-<table id="list">
-    <tbody>
+<div id="list">
         <% sneakers.forEach(function(s) { %>
-            <tr>
-                <td><%= s.name %></td>
-                <td><%= s.price %></td>
-            </tr>
+                <div>
+                   <a href="/sneakers/<%= s._id %>"><img src="<%= s.img %>" alt=""></a>
+                </div>
+                <div><%= s.name %></div>
+                <div><%= s.price %></div>
             <% }); %>
-    </tbody> 
-</table>
+</div>
 <%- include('../partials/footer') %>
