@@ -3,14 +3,8 @@ var Sneaker = require('../models/sneaker');
 module.exports = { 
     index, 
     buy,
-    details,
-    cart
+    details
 }; 
-
-function cart(req,res){ 
-    //user clicks on submit button obejct will post on cart view
-    //and user wiil be redirected back to the buy view.
-}
 
 function details(req, res){ 
     Sneaker.findById(req.params.id)

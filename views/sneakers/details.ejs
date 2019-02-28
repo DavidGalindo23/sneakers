@@ -1,29 +1,19 @@
 <%- include('../partials/header') %>
     <div class="details">
         <img class="pic" src="<%= sneaker.img %>" alt="">
+        <img class="pic" src="<%= sneaker.img2 %>" alt="">
     </div>
     <div class="details"><%= sneaker.name %></div>
     <div class="details" ><%= sneaker.price %></div>
 
     <!-- <button type="button" onclick="">ADD TO CART</button> -->
-    <form action="/sneakers" method="POST">
-        <label>Size:</label>
-        <Select name="size">
-            <option value="6">6</option>
-            <option value="6.5">6.5</option>
-            <option value="7">7</option>
-            <option value="7.5">7.5</option>
-            <option value="8">8</option>
-            <option value="8.5">8.5</option>
-            <option value="9">9</option>
-            <option value="9.5">9.5</option>
-            <option value="10">10</option>
-            <option value="10.5">10.5</option>
-            <option value="11">11</option>
-            <option value="11.5">11.5</option>
-            <option value="12">12</option>
-            <option value="12.5">12.5</option>
-        </Select>
+    <form action="/cart" method="POST">
+        <!-- <label><%= sneaker.size %></label> -->
+        <input type="hidden" name="name" value="<%= sneaker.name%>">
+        <input type="hidden" name="size" value="<%= sneaker.size%>">
+        <input type="hidden" name="price" value="<%= sneaker.price%>">
+        <input type="hidden" name="img" value="<%= sneaker.img%>">
+        <input type="hidden" name="img2" value="<%= sneaker.img2%>">
         <input type="submit">
     </form>
 <%- include('../partials/footer') %>

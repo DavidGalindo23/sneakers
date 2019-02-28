@@ -167,7 +167,7 @@ exports.products = [
     { 
         "sku": "C0-W39A", 
         "name": "SUPREME X AIR MORE UPTEMPO 'METALIC GOLD'", 
-        "size": "4", 
+        "size": "10", 
         "price": "$2899",
         "img": "https://i.imgur.com/R6PmU1G.png", 
         "img2": "https://i.imgur.com/pFs36is.png"
