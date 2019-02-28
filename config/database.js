@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/sneakers',
+mongoose.connect(process.env.MONGODB,
   { useNewUrlParser: true }
 );
 

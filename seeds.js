@@ -1,4 +1,5 @@
 // utility to initialize database
+require('dotenv').config();
 require('./config/database');
 const Sneaker = require('./models/sneaker');
 const data = require('./data');

@@ -9,9 +9,17 @@
 </head>
 <body>
   <nav>
-    <a href="/" >Home</a>
-    <a href="/sneakers/buy" >Buy</a>
-    <a href="" >Sell</a>
-    <a href="" >Cart</a>
+    <a href="/">Home</a>
+    <a href="/sneakers/buy">Buy</a>
+    <a href="">Sell</a>
+    <a href="">Cart</a>
+    <a>
+      <% if (user) { %>
+        <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+      <% } else { %>
+        <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+      <% } %>
+    </a>
+    
   </nav>  
   <main>

@@ -23,7 +23,6 @@ var sneakerSchema = new Schema({
     img2: { 
         type: String
     }
-    
 }); 
 
 module.exports = mongoose.model('Sneaker', sneakerSchema); 
