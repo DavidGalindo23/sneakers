@@ -15,8 +15,8 @@ function update(req,res){
 }
 
 function deleteAll(req, res){ 
-    req.user.cart.deleteAll({}); 
-    //req.user.save(function(err){ 
-        res.redirect('sneakers/home');
-   // });
+    req.user.cart.splice(0,req.user.cart.length);
+    req.user.save(function(err){ 
+        res.redirect('sneakers/');
+    })
 }
