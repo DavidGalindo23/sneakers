@@ -13,7 +13,7 @@ exports.products = [
         "size": "8", 
         "price": "$1000",
         "img": "https://i.imgur.com/CvtXxm7.png",
-        "img2": "https://i.imgur.com/Bu9KIqR.png"
+        "img2": "https://i.imgur.com/AO8NDLW.png"
     },
     { 
         "sku": "A2-J59A", 

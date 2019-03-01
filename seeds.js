@@ -4,7 +4,7 @@ require('./config/database');
 const Sneaker = require('./models/sneaker');
 const data = require('./data');
 
-// clear out all movies and performers to prevent dups
+// clear out all sneakers to prevent dups
 const p1 = Sneaker.deleteMany({});
 Promise.all([p1])
 .then(function(results) {

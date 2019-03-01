@@ -2,7 +2,8 @@ var Sneaker = require('../models/sneaker');
 var User = require('../models/user');
 
 module.exports = {
-    update
+    update,
+    delete: deleteAll
 };
 
 function update(req,res){ 
@@ -11,4 +12,11 @@ function update(req,res){
             console.log(req.user.cart)
             res.redirect('sneakers/buy')
         })
+}
+
+function deleteAll(req, res){ 
+    req.user.cart.deleteAll({}); 
+    //req.user.save(function(err){ 
+        res.redirect('sneakers/home');
+   // });
 }
