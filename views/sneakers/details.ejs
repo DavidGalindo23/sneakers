@@ -9,11 +9,7 @@
     <!-- <button type="button" onclick="">ADD TO CART</button> -->
     <form action="/cart" method="POST">
         <!-- <label><%= sneaker.size %></label> -->
-        <input type="hidden" name="name" value="<%= sneaker.name%>">
-        <input type="hidden" name="size" value="<%= sneaker.size%>">
-        <input type="hidden" name="price" value="<%= sneaker.price%>">
-        <input type="hidden" name="img" value="<%= sneaker.img%>">
-        <input type="hidden" name="img2" value="<%= sneaker.img2%>">
+        <input type="hidden" name="_id" value="<%= sneaker._id%>">
         <input type="submit">
     </form>
 <%- include('../partials/footer') %>

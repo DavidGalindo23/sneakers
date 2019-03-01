@@ -1,11 +1,29 @@
 <%- include('../partials/header') %>
 
 <div class="details">
-    <img class="pic" src="<%= sneaker.img %>" alt="">
-    <img class="pic" src="<%= sneaker.img2 %>" alt="">
+    <%= cart.length %>
+    <% cart.forEach(sneakerId => { %>
+        <%= sneakerId %>
+        <% var sneakerDetails = sneakers.filter(sneaker => sneaker.id === sneakerId) %>
+
+        <%= sneakerDetails.length %>
+        <% sneakers.forEach(sneaker => { %>
+
+            <h1>hi</h1>
+            <% if(sneakers.indexOf(sneakerId) !== -1){ %>
+               
+
+                <h1><%= sneaker.name %></h1>
+            <% } else {%>
+
+            <% } %>
+
+        
+        <% }); %>
+            
+    <% }); %>
+
 </div>
-<div class="details"><%= sneaker.name %></div>
-<div class="details" ><%= sneaker.price %></div>
 
 
-<%- include('../partials/footer') %>rs
+<%- include('../partials/footer') %>
