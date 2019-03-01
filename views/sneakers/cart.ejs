@@ -2,28 +2,16 @@
 
 <div class="details">
     <%= cart.length %>
-    <% cart.forEach(sneakerId => { %>
-        <%= sneakerId %>
-        <% var sneakerDetails = sneakers.filter(sneaker => sneaker.id === sneakerId) %>
-
-        <%= sneakerDetails.length %>
-        <% sneakers.forEach(sneaker => { %>
-
-            <h1>hi</h1>
-            <% if(sneakers.indexOf(sneakerId) !== -1){ %>
-               
-
-                <h1><%= sneaker.name %></h1>
-            <% } else {%>
-
-            <% } %>
-
-        
-        <% }); %>
-            
-    <% }); %>
-
+    <% sneakerDetails.forEach(sneaker => { %>
+        <img id="cartImg" src="<%= sneaker.img %>" alt="sneaker"/>
+        <%= sneaker.name %>
+        <%= sneaker.price %>
+    <%  }) %>
 </div>
+
+<form action="/" method="POST">
+    <input type="submit">
+</form>
 
 
 <%- include('../partials/footer') %>

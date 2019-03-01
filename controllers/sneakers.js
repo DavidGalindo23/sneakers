@@ -24,30 +24,26 @@ function details(req, res){
 function show(req, res){
     // console.log("THIS IS THE CARTS FIRST ITEM:", req.user.cart[0])
     let cart = req.user.cart
-   
     
     Sneaker.find({}, function(err, sneakers){
 
+        //SneakerDetails returns an array of "shoe detail" objects which are the result of the sneakers array being filtered
+        // for a particular sneaker, based off the id of the current cart object inside of "map"
         sneakerDetails = cart.map(sneakerId => {
            
-            let filtered  = sneakers.filter(sneaker => {
-                console.log(typeof(sneakerId), typeof(sneaker._id), sneakerId.toString(), sneaker._id.toString())
-               console.log(sneakerId.toString() == sneaker._id.toString())
-
-                return sneaker._id.equals(sneakerId)
-            })
-            console.log("FILTERED", filtered)
-
+        let filtered  = sneakers.filter(sneaker => {
+            return JSON.stringify(sneaker._id) == JSON.stringify(sneakerId)
         })
+         return filtered[0]
+        }).filter(sneaker => sneaker)
+       
         console.log("sneakerDetails", sneakerDetails)
-
-        // console.log("cart", req.user.cart, "sneakers", sneakers);
-
 
         res.render('sneakers/cart', {
             user: req.user,
             cart: req.user.cart,
-            sneakers
+            sneakers,
+            sneakerDetails
         })
     })
 }
